@@ -2,8 +2,8 @@
     <div>
       <div class="item">
         <p>New todo: {{ newItem }}</p>
-        <input type="text" placeholder="todo" v-model="newItem">
-        <button @click="addItem">add</button>
+        <input type="text" placeholder="ADD YOUR TASK" v-model="newItem">
+        <button @click="addItem">ADD</button>
       </div>
       
       <TodoItem 
@@ -26,8 +26,8 @@
       return {
         newItem: '',
         items: [
-          { title: 'Do shopping', completed: false, id: '1' },
-          { title: 'Do homework', completed: true, id: '2' }
+         // { title: 'Do shopping', completed: false, id: '1' },
+         // { title: 'Do homework', completed: true, id: '2' }
         ]
         }
       },
@@ -53,10 +53,19 @@
   
   <style>
     .item {
-      border: 1px solid #cdcdcd;
+      border: 1px dotted #c8c8c8;
       margin: 8px;
       padding: 10px;
       border-radius: 15px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      flex-wrap: wrap;
+      font-size: 17px;
+      width: 500px;;
+      align-items: center;
+      justify-content: center;
+
     }
   
     .completed {
@@ -65,5 +74,50 @@
   
     .completed h2 {
       text-decoration: line-through;
+    }
+
+    body {
+      letter-spacing: 0.1px;
+      margin: 0;
+      padding: 0;
+      font-family: 'Share Tech Mono', Monospace, Courier;
+      font-weight: 400;
+      font-size: 17px;
+      color: #c8c8c8;
+      background: #222;
+      display: flex;
+      justify-content: center;
+      align-content: center;
+    }
+
+    button {
+      color: #c8c8c8;
+      background: #222;
+      border: 0.8px solid #c8c8c8;
+      border-radius: 5px;
+      width: 50px;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    h2 {
+      font-size: 17px;
+    }
+
+    input {
+      text-align: center;
+      border: solid #00000 0.5px;
+      border-radius: 8px;
+      width: 50%;
+      color: #000000;
+      background: ;
+      height: 25px;
+      margin-bottom: 15px;
     }
   </style>
