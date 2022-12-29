@@ -1,4 +1,6 @@
 # vueapp
+Basic single page TODO App that allows you to create tasks and marking completion.
+I'm gonna improve it and set up live version when it gets better.
 
 ## Project setup
 ```
